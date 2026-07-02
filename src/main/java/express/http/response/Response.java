@@ -160,7 +160,7 @@ public class Response {
         logged = true;
         Status status = Status.valueOf(getStatus());
         if (status != null) {
-            log.info("Handled request in " + (System.currentTimeMillis() - start) + "ms with " + status.getCode() + " " + status.getDescription() + " (" + request.getURI().toString() + ")");
+            log.info("Handled request in {}ms with {} {} ({} {})", System.currentTimeMillis() - start, status.getCode(), status.getDescription(), request.getMethod(), request.getURI().toString());
         }
     }
     /**
